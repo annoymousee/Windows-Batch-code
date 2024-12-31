@@ -20,7 +20,7 @@ if NOT EXIST files echo File deleted
  goto End
 :UNLOCK
  set/p "pass=>"
- if %pass%== 456 goto phase 2
+ if %pass%== FAKE_PASSWORD goto phase 2
  if NOT %pass%== 123 goto FAIL
  attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" THE_FILE_YOU_WANT_TO_ADD
  ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" 
